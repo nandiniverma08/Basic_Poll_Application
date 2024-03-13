@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form2.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>FlyWeight Polls</h1>
+    <h2>Will India win the ICC World Cup next time?</h2>
+
+    <button id="vote-id" onclick="navigatetoThirdPage()">
+      Vote on this Poll
+    </button>
+
+    <div id="poll-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>Options</th>
+            <th>Votes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Yes, India will win the next ICC world cup</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>No, India won't win the next ICC world cup</td>
+            <td>10</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script>
+      function navigatetoThirdPage() {
+        window.location.href = "form3.html";
+      }
+    </script>
+  </body>
+</html>

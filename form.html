@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main-div">
+      <h1>FlyWeight Poll</h1>
+
+      <div id="parent-container">
+        <div id="first-div">
+          <button id="create-poll-button" onclick="navigatetoLastPage()">
+            Create Poll
+          </button>
+          <!-- ... -->
+          <div id="categories">
+            <input type="checkbox" id="sports" name="category" value="sports" />
+            <label for="sports">Sports</label> <br />
+
+            <input type="checkbox" id="health" name="category" value="health" />
+            <label for="health">Health</label> <br />
+
+            <input
+              type="checkbox"
+              id="politics"
+              name="category"
+              value="politics"
+            />
+            <label for="politics">Politics</label> <br />
+
+            <input type="checkbox" id="games" name="category" value="games" />
+            <label for="games">Games</label> <br />
+
+            <button id="filter-by-tags-button">Filter by tags</button>
+          </div>
+        </div>
+        <!-- ... -->
+
+        <div id="poll-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Number</th>
+                <th>Poll Question</th>
+                <th>Total Votes</th>
+                <th>Tags</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr onclick="navigateToSecondPage()" style="cursor: pointer">
+                <td>1</td>
+                <td>Will India win the ICC World cup next time?</td>
+                <td>22</td>
+                <td>Sports,Games</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>What will be the total corona casualties by</td>
+                <td>10</td>
+                <td>Health,Politics</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function navigateToSecondPage() {
+        window.location.href = "form2.html";
+      }
+
+      function navigatetoLastPage() {
+        window.location.href = "form4.html";
+      }
+    </script>
+  </body>
+</html>

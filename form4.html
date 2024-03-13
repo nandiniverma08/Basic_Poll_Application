@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form4.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>FlyWeight Polls</h1>
+
+    <div id="main-div">
+      <h4>Question</h4>
+      <input type="text" placeholder="Type your question here" />
+      <h4>Answer</h4>
+      <div id="optionsContainer">
+        <input type="text" placeholder="Option1" />
+        <input type="text" placeholder="Option2" />
+      </div>
+      <button onclick="addOption()">Add option</button>
+      <h4>Comma separated tags</h4>
+      <input type="text" placeholder="Tag1, tag2, tag3" />
+    </div>
+
+    <button id="create">Create Poll</button>
+
+    <script>
+      function addOption() {
+        // Get the options container
+        const optionsContainer = document.getElementById("optionsContainer");
+
+        // Create a new input element
+        const newInput = document.createElement("input");
+        newInput.type = "text";
+        newInput.placeholder = `Option${optionsContainer.children.length + 1}`;
+
+        // Append the new input element to the options container
+        optionsContainer.appendChild(newInput);
+      }
+    </script>
+  </body>
+</html>
